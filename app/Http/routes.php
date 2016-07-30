@@ -25,4 +25,14 @@ Route::get('/admin', function(){
 
 });
 
+Route::get('/admin/users/create', function(){
+
+    return view('admin.users.create');
+
+});
+
 Route::resource('admin/users', 'AdminUsersController');
+
+
+//Route::resource('admin/users/create', 'AdminUsersController');
+
