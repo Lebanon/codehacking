@@ -8,5 +8,6 @@ class Photo extends Model
 {
     //
 
-    protected $fillable = ['photo_id'];
+    protected $fillable = ['photo_id','file'];
+
 }
