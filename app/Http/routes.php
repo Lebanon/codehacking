@@ -31,8 +31,19 @@ Route::get('/admin/users/create', function(){
 
 });
 
-Route::resource('admin/users', 'AdminUsersController');
+Route::get('/admin/posts/create', function(){
 
+    return view('admin.posts.create');
 
-//Route::resource('admin/users/create', 'AdminUsersController');
+});
+
+Route::group(['middleware'=>'admin'], function(){
+
+    Route::resource('admin/users', 'AdminUsersController');
+
+    Route::resource('admin/posts', 'AdminPostsController');
+
+    //Route::resource('admin/posts/create', 'AdminPostsController');
+
+});
 
