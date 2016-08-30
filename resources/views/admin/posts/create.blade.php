@@ -44,6 +44,11 @@
 
         {!! Form::close() !!}
 
+
+
+
+
+
     </div>
 
     <div class="row">
